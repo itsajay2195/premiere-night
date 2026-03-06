@@ -63,7 +63,6 @@ function TabNavigator() {
         component={WatchlistScreen}
         options={{ tabBarLabel: 'WATCHLIST' }}
       />
-      <Tab.Screen name={DETAILS_SCREEN} component={DetailsScreen} />
     </Tab.Navigator>
   );
 }
@@ -75,7 +74,7 @@ export function AppNavigator() {
       <Stack.Screen
         name={DETAILS_SCREEN}
         component={DetailsScreen}
-        options={{ animation: 'slide_from_right' }}
+        options={{ animation: 'slide_from_bottom' }}
       />
     </Stack.Navigator>
   );

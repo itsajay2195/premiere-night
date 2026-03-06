@@ -91,7 +91,6 @@ function HomeScreen() {
   const isSearching = searchQuery.trim().length > 0;
   const showGenreResults = !!selectedGenre && !isSearching;
 
-  console.log('np1>>', JSON.stringify(nowPlaying, null, 3));
   return (
     <View style={styles.safe}>
       <StatusBar barStyle="light-content" backgroundColor={Colors.background} />
