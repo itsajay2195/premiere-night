@@ -10,7 +10,6 @@ import {
 import WatchlistScreen from '../screens/WatchlistScreen/WatchlistScreen';
 import DetailsScreen from '../screens/DetailsScreen/DetailsScreen';
 import { Colors } from '../theme/theme';
-import { Text } from 'react-native';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const Stack = createNativeStackNavigator<any>(); //add types
@@ -74,7 +73,7 @@ export function AppNavigator() {
       <Stack.Screen
         name={DETAILS_SCREEN}
         component={DetailsScreen}
-        options={{ animation: 'slide_from_right' }}
+        options={{ animation: 'slide_from_bottom' }}
       />
     </Stack.Navigator>
   );

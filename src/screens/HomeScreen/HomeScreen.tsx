@@ -15,6 +15,7 @@ import { AppFlatList } from '../../components/AppFlatlist/AppFlatList';
 import { SearchBar } from '../../components/Searchbar/Searchbar';
 import { MovieCard } from './components/MovieCard';
 import { GenreFilter } from './components/GenreFilter';
+import { DETAILS_SCREEN } from '../../constants/screenConstants';
 
 function HomeScreen() {
   const navigation = useNavigation<any>();
@@ -84,13 +85,12 @@ function HomeScreen() {
   }, [searchQuery]);
 
   const goToDetail = (movie: Movie) => {
-    navigation.navigate('Detail', { movieId: movie.id, movie });
+    navigation.navigate(DETAILS_SCREEN, { movieId: movie.id, movie });
   };
 
   const isSearching = searchQuery.trim().length > 0;
   const showGenreResults = !!selectedGenre && !isSearching;
 
-  console.log('np1>>', JSON.stringify(nowPlaying, null, 3));
   return (
     <View style={styles.safe}>
       <StatusBar barStyle="light-content" backgroundColor={Colors.background} />
