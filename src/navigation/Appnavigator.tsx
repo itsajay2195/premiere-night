@@ -63,6 +63,7 @@ function TabNavigator() {
         component={WatchlistScreen}
         options={{ tabBarLabel: 'WATCHLIST' }}
       />
+      <Tab.Screen name={DETAILS_SCREEN} component={DetailsScreen} />
     </Tab.Navigator>
   );
 }
