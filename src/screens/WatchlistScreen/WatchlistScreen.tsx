@@ -5,7 +5,6 @@ import {
   StyleSheet,
   TouchableOpacity,
   Image,
-  StatusBar,
 } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
@@ -43,7 +42,6 @@ export default function WatchlistScreen() {
   );
   return (
     <View style={styles.safe}>
-      <StatusBar barStyle="light-content" backgroundColor={Colors.background} />
       <View style={styles.container}>
         <View style={styles.header}>
           <Typography variant="heading">WATCHLIST</Typography>

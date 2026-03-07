@@ -7,7 +7,6 @@ import {
   TouchableOpacity,
   ActivityIndicator,
   Dimensions,
-  StatusBar,
 } from 'react-native';
 import { useNavigation, useRoute, RouteProp } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
@@ -79,8 +78,6 @@ export default function DetailScreen() {
 
   return (
     <View style={styles.safe}>
-      <StatusBar barStyle="light-content" backgroundColor={Colors.background} />
-
       {/*  top section*/}
       <TouchableOpacity style={styles.backBtn} onPress={goBack}>
         <MaterialCommunityIcons

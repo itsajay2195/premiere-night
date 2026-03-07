@@ -1,11 +1,5 @@
 import React, { useEffect, useState, useCallback } from 'react';
-import {
-  View,
-  ScrollView,
-  StyleSheet,
-  RefreshControl,
-  StatusBar,
-} from 'react-native';
+import { View, ScrollView, StyleSheet, RefreshControl } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { Genre, Movie } from '../../api/types/movie';
 import { movieApi } from '../../api/movieApi';
@@ -93,7 +87,6 @@ function HomeScreen() {
 
   return (
     <View style={styles.safe}>
-      <StatusBar barStyle="light-content" backgroundColor={Colors.background} />
       <ScrollView
         style={styles.container}
         refreshControl={
