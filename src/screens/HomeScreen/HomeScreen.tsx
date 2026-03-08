@@ -10,6 +10,7 @@ import ListHeader from './components/ListHeader';
 import { useHomeScreen } from './state/useHomescreen';
 import { buildSections } from './state/buildSections';
 import { Section } from './type';
+import { DETAILS_SCREEN } from '../../constants/screenConstants';
 
 function HomeScreen() {
   const navigation = useNavigation<any>();
@@ -35,7 +36,7 @@ function HomeScreen() {
 
   const goToDetail = useCallback(
     (movie: Movie) =>
-      navigation.navigate('Detail', { movieId: movie.id, movie }),
+      navigation.navigate(DETAILS_SCREEN, { movieId: movie.id, movie }),
     [navigation],
   );
 

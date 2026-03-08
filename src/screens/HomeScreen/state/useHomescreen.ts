@@ -1,6 +1,7 @@
 import { useReducer, useEffect, useCallback } from 'react';
 import { movieApi } from '../../../api/movieApi';
 import { Movie, Genre } from '../../../api/types/movie';
+import { showToast } from '../../../utils/toas';
 
 interface HomeState {
   nowPlaying: Movie[];
@@ -52,6 +53,7 @@ function homeReducer(state: HomeState, action: HomeAction): HomeState {
     case 'LOAD_SUCCESS':
       return { ...state, loading: false, isError: false, ...action.payload };
     case 'LOAD_ERROR':
+      showToast.error('Failed to load films.');
       return { ...state, loading: false, isError: true };
     case 'REFRESH_START':
       return { ...state, refreshing: true };
@@ -124,6 +126,8 @@ export function useHomeScreen() {
       try {
         const r = await movieApi.search(state.searchQuery.trim());
         dispatch({ type: 'SET_SEARCH_RESULTS', payload: r.results });
+      } catch {
+        showToast.error('Search failed.');
       } finally {
         dispatch({ type: 'SET_SEARCHING', payload: false });
       }
