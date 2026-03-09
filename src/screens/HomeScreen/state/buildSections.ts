@@ -3,6 +3,10 @@ import type { Section } from '../type';
 
 type SectionOrientation = 'horizontal' | 'vertical';
 
+// Returns a flat Section[] for the single outer FlatList.
+// Conditional sections (genre, search) are prepended so the
+// order always makes sense to the user.
+
 export function buildSections({
   isSearching,
   showGenreResults,

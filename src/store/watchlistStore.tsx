@@ -4,6 +4,9 @@ import type { MMKV } from 'react-native-mmkv';
 import { createMMKV } from 'react-native-mmkv';
 import type { Movie } from '../api/types/movie';
 
+// MMKV adapter for Zustand persist middleware
+// MMKV is synchronous (JSI), no async overhead for simple key-value storage
+
 const storage: MMKV = createMMKV({ id: 'premiere-watchlist' });
 
 const mmkvAdapter = {

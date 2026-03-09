@@ -1,6 +1,9 @@
 import { TMDB_API_KEY } from '../../config';
 import { BASE_URL } from '../constants/api';
 
+// Centralised fetch wrapper, all requests go through here
+// so logging, error handling and headers stay consistent
+
 const API_KEY = TMDB_API_KEY;
 
 export class ApiError extends Error {

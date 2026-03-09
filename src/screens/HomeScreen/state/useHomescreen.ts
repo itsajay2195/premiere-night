@@ -75,6 +75,8 @@ function homeReducer(state: HomeState, action: HomeAction): HomeState {
 }
 
 export function useHomeScreen() {
+  // useReducer over multiple useStates prevents loading/error flags
+  // going out of sync during concurrent state updates
   const [state, dispatch] = useReducer(homeReducer, initialState);
 
   const loadHome = useCallback(async () => {
