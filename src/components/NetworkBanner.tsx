@@ -22,6 +22,7 @@ function NetworkBanner() {
     }).start();
   }, [isConnected]);
 
+  if (isConnected) return null;
   return (
     <Animated.View style={[styles.banner, { transform: [{ translateY }] }]}>
       <View style={styles.content}>
