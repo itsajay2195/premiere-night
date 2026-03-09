@@ -1,19 +1,20 @@
 import React, { useCallback } from 'react';
 import { View, StyleSheet, RefreshControl } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import { Movie } from '../../api/types/movie';
+import type { Movie } from '../../api/types/movie';
 import { Typography } from '../../components/Typography';
 import { Colors, Spacing } from '../../theme/theme';
-import { AppFlatList } from '../../components/AppFlatlist/AppFlatList';
 import { MovieCard } from './components/MovieCard';
 import ListHeader from './components/ListHeader';
-import { useHomeScreen } from './state/useHomescreen';
+import { useHomeScreen } from './state/useHomeScreen';
 import { buildSections } from './state/buildSections';
-import { Section } from './type';
-import { DETAILS_SCREEN } from '../../constants/screenConstants';
+import type { Section } from './type';
+import { DETAILS_SCREEN } from '../../constants/screens';
+import { AppFlatList } from '../../components/AppFlatList';
+import type { RootStackNavigationProp } from '../../navigation/types';
 
 function HomeScreen() {
-  const navigation = useNavigation<any>();
+  const navigation = useNavigation<RootStackNavigationProp>();
   const { state, onRefresh, setSearchQuery, setSelectedGenre } =
     useHomeScreen();
 
@@ -64,7 +65,7 @@ function HomeScreen() {
         <AppFlatList
           horizontal={section.orientation === 'horizontal'}
           data={section.data}
-          keyExtractor={(item: any) => String(item.id)}
+          keyExtractor={item => String(item?.id)}
           contentContainerStyle={styles.row}
           renderItem={({ item }: { item: Movie }) => (
             <MovieCard movie={item} onPress={goToDetail} size={section.size} />
@@ -94,7 +95,7 @@ function HomeScreen() {
             onSelectGenre={setSelectedGenre}
           />
         }
-        ListFooterComponent={<View style={{ height: 40 }} />}
+        ListFooterComponent={<View style={styles.footer} />}
         showsVerticalScrollIndicator={false}
         refreshControl={
           <RefreshControl
@@ -132,4 +133,5 @@ const styles = StyleSheet.create({
     marginBottom: Spacing.sm,
   },
   row: { paddingHorizontal: Spacing.md },
+  footer: { height: 40 },
 });

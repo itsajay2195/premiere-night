@@ -1,5 +1,5 @@
-import { Genre, Movie } from '../../../api/types/movie';
-import { Section } from '../type';
+import type { Genre, Movie } from '../../../api/types/movie';
+import type { Section } from '../type';
 
 type SectionOrientation = 'horizontal' | 'vertical';
 

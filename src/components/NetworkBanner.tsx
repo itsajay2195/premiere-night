@@ -1,13 +1,12 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import { View, StyleSheet, Animated, Platform } from 'react-native';
 import NetInfo from '@react-native-community/netinfo';
 import { Typography } from '../components/Typography';
 import { Colors, Spacing } from '../theme/theme';
 
+const translateY = new Animated.Value(-50);
 function NetworkBanner() {
   const [isConnected, setIsConnected] = React.useState(false);
-  const translateY = useRef(new Animated.Value(-50)).current;
-
   useEffect(() => {
     const unsubscribe = NetInfo.addEventListener(state => {
       setIsConnected(!!state.isConnected);
@@ -21,7 +20,7 @@ function NetworkBanner() {
       duration: 300,
       useNativeDriver: true,
     }).start();
-  }, [isConnected, translateY]);
+  }, [isConnected]);
 
   return (
     <Animated.View style={[styles.banner, { transform: [{ translateY }] }]}>

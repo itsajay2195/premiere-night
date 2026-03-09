@@ -1,4 +1,4 @@
-import { Movie } from '../../api/types/movie';
+import type { Movie } from '../../api/types/movie';
 
 type SectionOrientation = 'horizontal' | 'vertical';
 export interface Section {

@@ -1,9 +1,9 @@
 import React from 'react';
 import { View, Image, TouchableOpacity, StyleSheet } from 'react-native';
-import { getPosterUrl } from '../../../utils/imageUtils';
-import { Movie } from '../../../api/types/movie';
+import { getPosterUrl } from '../../../utils/image';
+import type { Movie } from '../../../api/types/movie';
 import { Colors, Radius, Spacing } from '../../../theme/theme';
-import { Typography } from '../../../components/Typography/Typography';
+import { Typography } from '../../../components/Typography';
 
 const CARD_WIDTH = 140;
 const CARD_HEIGHT = 210;

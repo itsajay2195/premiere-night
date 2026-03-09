@@ -5,17 +5,19 @@ import HomeScreen from '../screens/HomeScreen/HomeScreen';
 import {
   DETAILS_SCREEN,
   HOME_SCREEN,
+  MAIN_SCREEN,
   WATCHLIST_SCREEN,
-} from '../constants/screenConstants';
+} from '../constants/screens';
 import WatchlistScreen from '../screens/WatchlistScreen/WatchlistScreen';
 import DetailsScreen from '../screens/DetailsScreen/DetailsScreen';
 import { Colors } from '../theme/theme';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import type { RootStackParamList, TabParamList } from './types';
 
-const Stack = createNativeStackNavigator<any>(); //add types
-const Tab = createBottomTabNavigator<any>(); //add types
+const Stack = createNativeStackNavigator<RootStackParamList>(); //add types
+const Tab = createBottomTabNavigator<TabParamList>(); //add types
 
-const getTabIcon = (routeName: string, focused: boolean) => {
+const getTabIcon = (routeName: string, focused: boolean): string => {
   switch (routeName) {
     case HOME_SCREEN:
       return focused ? 'movie-open' : 'movie-open-outline';
@@ -26,6 +28,21 @@ const getTabIcon = (routeName: string, focused: boolean) => {
   }
 };
 
+const renderTabIcon = ({
+  route,
+  focused,
+  color,
+}: {
+  route: { name: string };
+  focused: boolean;
+  color: string;
+}) => (
+  <MaterialCommunityIcons
+    name={getTabIcon(route.name, focused)}
+    size={24}
+    color={color}
+  />
+);
 function TabNavigator() {
   return (
     <Tab.Navigator
@@ -43,13 +60,8 @@ function TabNavigator() {
           fontWeight: '600',
           letterSpacing: 0.5,
         },
-        tabBarIcon: ({ focused, color }) => (
-          <MaterialCommunityIcons
-            name={getTabIcon(route.name, focused)}
-            size={24}
-            color={color}
-          />
-        ),
+        tabBarIcon: ({ focused, color }) =>
+          renderTabIcon({ route, focused, color }),
       })}
     >
       <Tab.Screen
@@ -69,7 +81,7 @@ function TabNavigator() {
 export function AppNavigator() {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
-      <Stack.Screen name="Main" component={TabNavigator} />
+      <Stack.Screen name={MAIN_SCREEN} component={TabNavigator} />
       <Stack.Screen
         name={DETAILS_SCREEN}
         component={DetailsScreen}

@@ -1,14 +1,14 @@
 import React from 'react';
+import type { FlatListProps } from 'react-native';
 import {
   FlatList,
-  FlatListProps,
   ActivityIndicator,
   View,
   StyleSheet,
   RefreshControl,
 } from 'react-native';
-import { Colors, Spacing } from '../../theme/theme';
-import { Typography } from '../Typography';
+import { Colors, Spacing } from '../theme/theme';
+import { Typography } from './Typography';
 
 interface AppFlatListProps<T> extends Omit<FlatListProps<T>, 'horizontal'> {
   isLoading?: boolean;

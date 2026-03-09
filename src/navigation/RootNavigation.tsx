@@ -4,25 +4,28 @@ import {
   StatusBar,
   StyleSheet,
 } from 'react-native';
-import { LinkingOptions, NavigationContainer } from '@react-navigation/native';
+import type { LinkingOptions } from '@react-navigation/native';
+import { NavigationContainer } from '@react-navigation/native';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import React from 'react';
-import { AppNavigator } from './Appnavigator';
-import ErrorBoundary from '../hoc/ErrorBoundary';
+import { AppNavigator } from './AppNavigator';
 import { Colors } from '../theme/theme';
 import Toast from 'react-native-toast-message';
-import NetworkBanner from '../hoc/NetworkBanner';
 import {
   DETAILS_SCREEN,
   HOME_SCREEN,
+  MAIN_SCREEN,
   WATCHLIST_SCREEN,
-} from '../constants/screenConstants';
+} from '../constants/screens';
+import ErrorBoundary from '../components/ErrorBoundary';
+import NetworkBanner from '../components/NetworkBanner';
+import type { RootStackParamList } from './types';
 
-const linking: LinkingOptions<any> = {
+const linking: LinkingOptions<RootStackParamList> = {
   prefixes: ['premierenight://'],
   config: {
     screens: {
-      Main: {
+      [MAIN_SCREEN]: {
         screens: {
           [HOME_SCREEN]: 'home',
           [WATCHLIST_SCREEN]: 'watchlist',
