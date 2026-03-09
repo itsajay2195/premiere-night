@@ -11,8 +11,8 @@ import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { useWatchlistStore } from '../../store/watchlistStore';
 import { Movie } from '../../api/types/movie';
 import { Colors, Radius, Spacing } from '../../theme/theme';
-import { getPosterUrl } from '../../utils/imageUtils';
-import { DETAILS_SCREEN } from '../../constants/screenConstants';
+import { getPosterUrl } from '../../utils/image';
+import { DETAILS_SCREEN } from '../../constants/screens';
 import { Typography } from '../../components/Typography';
 
 type Nav = NativeStackNavigationProp<any>;

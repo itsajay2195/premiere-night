@@ -14,7 +14,7 @@ import {
   DETAILS_SCREEN,
   HOME_SCREEN,
   WATCHLIST_SCREEN,
-} from '../constants/screenConstants';
+} from '../constants/screens';
 import ErrorBoundary from '../components/ErrorBoundary';
 import NetworkBanner from '../components/NetworkBanner';
 

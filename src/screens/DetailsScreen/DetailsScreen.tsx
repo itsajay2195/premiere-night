@@ -12,7 +12,7 @@ import { useNavigation, useRoute, RouteProp } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { Movie } from '../../api/types/movie';
 import { Colors, Radius, Spacing } from '../../theme/theme';
-import { getBackdropUrl, getPosterUrl } from '../../utils/imageUtils';
+import { getBackdropUrl, getPosterUrl } from '../../utils/image';
 import { movieApi } from '../../api/movieApi';
 import { useWatchlistStore } from '../../store/watchlistStore';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';

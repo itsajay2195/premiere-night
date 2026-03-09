@@ -6,7 +6,7 @@ import {
   DETAILS_SCREEN,
   HOME_SCREEN,
   WATCHLIST_SCREEN,
-} from '../constants/screenConstants';
+} from '../constants/screens';
 import WatchlistScreen from '../screens/WatchlistScreen/WatchlistScreen';
 import DetailsScreen from '../screens/DetailsScreen/DetailsScreen';
 import { Colors } from '../theme/theme';

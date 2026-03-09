@@ -9,7 +9,7 @@ import ListHeader from './components/ListHeader';
 import { useHomeScreen } from './state/useHomeScreen';
 import { buildSections } from './state/buildSections';
 import { Section } from './type';
-import { DETAILS_SCREEN } from '../../constants/screenConstants';
+import { DETAILS_SCREEN } from '../../constants/screens';
 import { AppFlatList } from '../../components/AppFlatList';
 
 function HomeScreen() {

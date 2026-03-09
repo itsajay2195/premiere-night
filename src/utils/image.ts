@@ -1,4 +1,4 @@
-import { IMAGE_BASE } from '../constants/apiConstants';
+import { IMAGE_BASE } from '../constants/api';
 
 type PosterSize = 'w185' | 'w342' | 'w500' | 'original';
 
