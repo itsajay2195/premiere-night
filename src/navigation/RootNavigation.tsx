@@ -46,7 +46,7 @@ const RootNavigation = () => {
             backgroundColor={Colors.background}
           />
           <KeyboardAvoidingView
-            behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+            behavior={Platform.OS === 'ios' ? 'padding' : undefined}
             keyboardVerticalOffset={Platform.OS === 'ios' ? 24 : 20}
             style={styles.flex1}
           >
