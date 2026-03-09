@@ -2,7 +2,7 @@
 
 A film discovery app for Mytheresa's internal screening curation. Browse now-playing and popular titles, filter by genre, search the TMDb catalogue, and build a watchlist all in a dark, editorial UI.
 
-[View on Appetize.io](https://appetize.io/app/b_4m5xnr74zil3yxngynw2rbtgda)
+[View on Appetize.io](https://appetize.io/app/b_ivj6ezrmcay6v2huhintz663zu)
 
 ---
 
@@ -11,7 +11,7 @@ A film discovery app for Mytheresa's internal screening curation. Browse now-pla
 You'll need Node 20+, JDK 17+, and Android Studio (or Xcode on Mac) set up before running the app.
 
 ```bash
-git clone https://github.com/itsajay2195/premiereNight.git
+git clone https://github.com/itsajay2195/premiere-night.git
 cd premiere-night
 npm install
 ```
