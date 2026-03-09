@@ -1,7 +1,8 @@
 import { create } from 'zustand';
 import { createJSONStorage, persist } from 'zustand/middleware';
-import { createMMKV, MMKV } from 'react-native-mmkv';
-import { Movie } from '../api/types/movie';
+import type { MMKV } from 'react-native-mmkv';
+import { createMMKV } from 'react-native-mmkv';
+import type { Movie } from '../api/types/movie';
 
 const storage: MMKV = createMMKV({ id: 'premiere-watchlist' });
 

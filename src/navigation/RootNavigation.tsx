@@ -4,7 +4,8 @@ import {
   StatusBar,
   StyleSheet,
 } from 'react-native';
-import { LinkingOptions, NavigationContainer } from '@react-navigation/native';
+import type { LinkingOptions } from '@react-navigation/native';
+import { NavigationContainer } from '@react-navigation/native';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import React from 'react';
 import { AppNavigator } from './AppNavigator';
@@ -18,8 +19,9 @@ import {
 } from '../constants/screens';
 import ErrorBoundary from '../components/ErrorBoundary';
 import NetworkBanner from '../components/NetworkBanner';
+import type { RootStackParamList } from './types';
 
-const linking: LinkingOptions<any> = {
+const linking: LinkingOptions<RootStackParamList> = {
   prefixes: ['premierenight://'],
   config: {
     screens: {

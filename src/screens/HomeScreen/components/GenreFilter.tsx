@@ -1,6 +1,6 @@
 import React, { useCallback } from 'react';
 import { StyleSheet } from 'react-native';
-import { Genre } from '../../../api/types/movie';
+import type { Genre } from '../../../api/types/movie';
 import { Colors, Radius, Spacing } from '../../../theme/theme';
 import { Pill } from '../../../components/Pill';
 import { AppFlatList } from '../../../components/AppFlatList';

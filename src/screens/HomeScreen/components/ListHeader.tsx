@@ -1,6 +1,6 @@
 import { StyleSheet, View } from 'react-native';
 import React, { memo } from 'react';
-import { Genre } from '../../../api/types/movie';
+import type { Genre } from '../../../api/types/movie';
 import { GenreFilter } from './GenreFilter';
 import { SearchBar } from '../../../components/Searchbar';
 import { Colors, Spacing } from '../../../theme/theme';

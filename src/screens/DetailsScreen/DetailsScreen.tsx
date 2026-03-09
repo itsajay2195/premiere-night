@@ -8,8 +8,9 @@ import {
   ActivityIndicator,
   Dimensions,
 } from 'react-native';
-import { useNavigation, useRoute, RouteProp } from '@react-navigation/native';
-import { Movie } from '../../api/types/movie';
+import type { RouteProp } from '@react-navigation/native';
+import { useNavigation, useRoute } from '@react-navigation/native';
+import type { Movie } from '../../api/types/movie';
 import { Colors, Radius, Spacing } from '../../theme/theme';
 import { getBackdropUrl, getPosterUrl } from '../../utils/image';
 import { movieApi } from '../../api/movieApi';
@@ -18,8 +19,9 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import { showToast } from '../../utils/toast';
 import { Typography } from '../../components/Typography';
 import { Pill } from '../../components/Pill';
-import { DETAILS_SCREEN, MAIN_SCREEN } from '../../constants/screens';
-import {
+import type { DETAILS_SCREEN } from '../../constants/screens';
+import { MAIN_SCREEN } from '../../constants/screens';
+import type {
   RootStackNavigationProp,
   RootStackParamList,
 } from '../../navigation/types';

@@ -1,12 +1,12 @@
-import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import { BottomTabNavigationProp } from '@react-navigation/bottom-tabs';
-import {
+import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import type { BottomTabNavigationProp } from '@react-navigation/bottom-tabs';
+import type {
   DETAILS_SCREEN,
   HOME_SCREEN,
   MAIN_SCREEN,
   WATCHLIST_SCREEN,
 } from '../constants/screens';
-import { Movie } from '../api/types/movie';
+import type { Movie } from '../api/types/movie';
 
 export type RootStackParamList = {
   [MAIN_SCREEN]: undefined;

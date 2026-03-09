@@ -1,5 +1,5 @@
 import { get } from './httpClient';
-import { GenresResponse, Movie, MoviesResponse } from './types/movie';
+import type { GenresResponse, Movie, MoviesResponse } from './types/movie';
 
 export const movieApi = {
   nowPlaying: (page = 1) =>

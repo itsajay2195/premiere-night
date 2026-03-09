@@ -1,11 +1,6 @@
 import React, { useState } from 'react';
-import {
-  View,
-  TextInput,
-  TextInputProps,
-  StyleSheet,
-  TouchableOpacity,
-} from 'react-native';
+import type { TextInputProps } from 'react-native';
+import { View, TextInput, StyleSheet, TouchableOpacity } from 'react-native';
 import { Typography } from './Typography';
 import { Colors, Radius, Spacing } from '../theme/theme';
 

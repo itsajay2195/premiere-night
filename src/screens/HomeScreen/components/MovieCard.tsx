@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Image, TouchableOpacity, StyleSheet } from 'react-native';
 import { getPosterUrl } from '../../../utils/image';
-import { Movie } from '../../../api/types/movie';
+import type { Movie } from '../../../api/types/movie';
 import { Colors, Radius, Spacing } from '../../../theme/theme';
 import { Typography } from '../../../components/Typography';
 

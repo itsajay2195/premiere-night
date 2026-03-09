@@ -1,4 +1,5 @@
-import React, { Component, ErrorInfo } from 'react';
+import type { ErrorInfo } from 'react';
+import React, { Component } from 'react';
 import { View, StyleSheet, TouchableOpacity } from 'react-native';
 import { Typography } from '../components/Typography';
 import { Colors, Spacing } from '../theme/theme';

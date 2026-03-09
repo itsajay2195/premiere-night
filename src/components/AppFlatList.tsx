@@ -1,7 +1,7 @@
 import React from 'react';
+import type { FlatListProps } from 'react-native';
 import {
   FlatList,
-  FlatListProps,
   ActivityIndicator,
   View,
   StyleSheet,
