@@ -8,15 +8,15 @@ import { LinkingOptions, NavigationContainer } from '@react-navigation/native';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import React from 'react';
 import { AppNavigator } from './AppNavigator';
-import ErrorBoundary from '../hoc/ErrorBoundary';
 import { Colors } from '../theme/theme';
 import Toast from 'react-native-toast-message';
-import NetworkBanner from '../hoc/NetworkBanner';
 import {
   DETAILS_SCREEN,
   HOME_SCREEN,
   WATCHLIST_SCREEN,
 } from '../constants/screenConstants';
+import ErrorBoundary from '../components/ErrorBoundary';
+import NetworkBanner from '../components/NetworkBanner';
 
 const linking: LinkingOptions<any> = {
   prefixes: ['premierenight://'],
